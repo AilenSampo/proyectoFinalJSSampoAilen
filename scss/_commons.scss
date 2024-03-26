@@ -1,0 +1,140 @@
+/* main.css */
+@mixin estilo-texto-y-fondo($color-letra, $color-fondo) {
+    color: $color-letra;
+    background-color: $color-fondo;
+}
+
+  * {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; 
+}
+
+.container {
+    text-align: center;
+    place-items: center;
+    justify-items: center;
+
+}
+
+header {
+    h1{
+        @include estilo-texto-y-fondo(#fff,  #c5116c); 
+        text-align: center;
+        padding: 20px;
+        font-size: 30px;   
+    }
+    p {
+    @include estilo-texto-y-fondo(#fff,  #c5116c); 
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold
+    }
+    // .img-logo{
+    //     @include estilo-texto-y-fondo(#fff,  #c5116c); 
+    //     width: 100px;
+    //     height: 100px
+    // }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh; 
+    h1 {
+        @include estilo-texto-y-fondo(#fff,  #c5116c); 
+        text-align: center;
+        padding: auto;
+        font-size: 36px;
+    }
+    h2 {
+        text-align: center;
+        padding: auto;
+        font-size: 36px;
+    }
+
+    h3{
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-size: 25px;
+        }
+    .seccion-tittle {
+        text-align: center;
+        padding: auto;
+        margin: 10px;
+        width: 100%;
+    }
+}
+
+.centrar-contenido {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main img {
+    object-fit: cover;
+}
+
+.color-list {
+    display: flex;
+    // flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center; 
+}
+
+.color-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.elements{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+.card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .card img {
+        margin: auto;
+    }
+}
+
+input.quantity {
+    width: 40px;
+}
+
+.total {
+    @include estilo-texto-y-fondo(#fff,  #c5116c); 
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold
+    
+}
+
+.btn-css{
+    @include estilo-texto-y-fondo(#fff,  #c5116c); 
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold
+}
+
